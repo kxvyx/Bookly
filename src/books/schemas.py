@@ -1,13 +1,14 @@
 from typing import Optional
 from pydantic import BaseModel
 from datetime import date, datetime
+import uuid
 
 class Book(BaseModel):
-    #uid: uuid.UUID
+    uid: uuid.UUID
     title: str
     author: str
     publisher: str
-    published_date: date
+    published_date: str
     page_count: int
     language: str
     created_at: datetime
