@@ -1,11 +1,10 @@
 from fastapi import APIRouter, Depends, status
 from .schemas import UserCreateModel, UserModel
-from .models import User
 from .service import UserService
 from src.db.main import get_session
 from sqlmodel.ext.asyncio.session import AsyncSession
 from fastapi.exceptions import HTTPException
-
+from .utils import create_access_token, decode_access_token
 
 auth_router = APIRouter()
 user_service = UserService()
