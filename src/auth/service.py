@@ -2,7 +2,7 @@ from sqlmodel.ext.asyncio.session import AsyncSession
 from src.auth.schemas import UserCreateModel
 from src.auth.models import User
 from datetime import datetime
-from sqlalchemy import select, update, delete
+from sqlmodel import select, update, delete
 from src.auth.utils import generate_password_hash 
 
 class UserService:
